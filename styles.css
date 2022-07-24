@@ -1,0 +1,386 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Epilogue', sans-serif;
+    background-color:  hsl(0, 0%, 98%);
+}
+
+.root {
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/**************** Header Styles ****************/
+header {
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    padding: 2rem;
+    position: relative;
+
+}
+
+header .logo img {
+    width: 90px;
+}
+
+header a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+
+header .menu-items ul {
+    list-style: none;
+    margin-top: 6px;
+}
+
+header .nav-icon {
+    display: none;
+}
+
+header .nav-icon-close {
+    display: none;
+}
+
+header a:hover {
+    color:  hsl(0, 0%, 8%);
+}
+
+header a .arrow {
+    transition: transform .3s;
+    width: 12px;
+}
+
+/********* Header Navbar Styles *********/
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem 0 4rem;
+}
+
+header .menu-items ul li {
+    display: inline-block;
+    margin: 0 2rem;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+header .menu-items ul li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+/**** Rotate arrow icon on hover ****/
+header .menu-items ul li:hover > a .arrow {
+    transform: rotate(-180deg);
+}
+
+/************ Dropdown menu styles ************/
+header .menu-items ul li .dropdown {
+    position: absolute;
+    width: max-content;
+    top: 100%;
+    right: 0;
+    display: block;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 18px  rgb(0 0 0 / .2);
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+header .menu-items ul li:nth-child(2) .dropdown {
+    left: 0;
+}
+
+header .menu-items ul li .dropdown li {
+    text-align: left;
+    display: block;
+    margin: 20px 0 20px 0;
+    padding: 0;
+}
+
+header .menu-items ul li .dropdown li a img {
+    margin-right: 20px;
+}
+
+/********* Account Buttons Style *********/
+header .account-buttons div{
+    display: inline;
+    margin-left: 3rem;
+    font-size: 18px;
+}
+
+header .account-buttons .register {
+    border: 1px solid  hsl(0, 0%, 8%);
+    padding: .6rem;
+    border-radius: 10px;
+}
+
+/************ Maximum width media query ************/
+@media (max-width: 1070px) {
+    /**** Navbar Icon OPEN ****/
+    header .nav-icon {
+        display: block;
+        margin-left: auto;
+        margin-right: 0;
+        position: relative;
+        z-index: 999;
+    }
+
+    /**** Navbar Icon CLOSE ****/
+    header .nav-icon-close {
+        display: block;
+        position: relative;
+        margin-left: 110px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    header {
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        padding: 2rem;
+        position: relative;
+    }
+
+    header nav {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: -100%;
+        transition: right 300ms ease;
+        z-index: 9999;
+        width: 220px;
+        min-height: 100vh;
+        background-color: #fff;
+    }
+
+    /**** Navbar background when CLOSE ****/
+    .nav-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: 300ms ease;
+    }
+
+    /**** Navbar background when OPEN ****/
+    .nav-background.active {
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(0 0 0 / .7);
+    }
+
+    header .menu-items {
+        margin-left: -45px;
+        width: 100%;
+        padding: 0;
+    }
+
+    header .menu-items ul {
+        padding: 0;
+    }
+
+    header .menu-items ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header nav.active {
+        right: 0;
+    }
+
+    /**** Dropdown in small devices ****/
+    header .menu-items ul li .dropdown {
+        visibility: visible;
+        opacity: 1;
+        display: none;
+        transform-origin: top;
+        box-shadow: none;
+        position: static;
+        padding: 0 2rem;
+        margin-bottom: -25px;
+    }
+
+    header .menu-items ul li .dropdown.active {
+        display: block;
+    }
+
+    header .menu-items ul li a .arrow {
+        margin-left: 15px;
+    }
+    /**** Disable Rotate arrow icon on hover ****/
+    header .menu-items ul li:hover > a .arrow {
+        transform: rotate(0);
+    }
+
+    header .menu-items ul li a .arrow.active {
+        transform: rotate(-180deg) !important;
+    }
+
+    header .account-buttons {
+        margin-left: -87px;
+        width: 220px;
+        display: block;
+    }
+
+    header .account-buttons div{
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/**************** HERO Section Strat ****************/
+.hero .small-devices-img {
+    display: none;
+}
+
+.hero {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/****** Hero CONTENTS ******/
+.hero .hero-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/****** Hero CONTENT TEXT ******/
+.hero .hero-content .hero-text-content {
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.hero .hero-content .text-heading h1,
+.hero .hero-content .text-heading h2 {
+    font-weight: 700;
+    font-size: 80px;
+}
+
+.hero .hero-content p {
+    width: 450px;
+    font-size: 18px;
+    line-height: 25px;
+    color: hsl(0, 0%, 41%);
+}
+
+.hero .hero-content .learn-more-btn {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: max-content;
+    padding: 1rem 1.5rem;
+}
+.hero .hero-content .learn-more-btn:hover {
+    color: #000;
+    background-color: transparent;
+}
+
+/****** Hero CONTENT PARTNERS ******/
+.hero .hero-content .hero-partners-img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/****** Hero LARGE Device IMAGE ******/
+.hero .large-devices-img img {
+    width: 400px;
+}
+
+/************ HERO Media query for SMALL and MEDIUM Devices ************/
+@media (max-width: 1100px) {
+    .hero .large-devices-img img {
+        width: 350px;
+    }
+}
+
+/****** Media query for 960px ******/
+@media (max-width: 960px) {
+    .hero .large-devices-img img {
+        display: none;
+    }
+
+    .hero .small-devices-img {
+        display: block;
+        width: 100%;
+        margin-top: 20vh;
+    }
+
+    .hero .small-devices-img img{
+       width: 100%;
+       height: 300px;
+       object-fit: contain;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        text-align: center;
+        height: 600px;
+    }
+
+    .hero .hero-content {
+        padding:0 1rem;
+    }
+    /****** HEADING TEXT Section ******/
+    .hero .hero-content .text-heading {
+        margin: 60px auto 25px;
+    }
+
+    .hero .hero-content .text-heading h1,
+    .hero .hero-content .text-heading h2 {
+        display: inline;
+        font-size: 2.2rem;
+    }
+
+    .hero .hero-content p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .hero .hero-content .learn-more-btn {
+        margin: 25px auto 50px;
+    }
+}
+
+/****** Media query for 456px ******/
+@media (max-width: 456px) {
+    .hero .hero-content .hero-partners-img {
+        margin-bottom: 80px;
+    }
+    .hero .hero-content .hero-partners-img img {
+        width: 70px;
+    }
+}

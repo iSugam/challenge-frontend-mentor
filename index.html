@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor Challenge | Intro section with dropdown navigation</title>
+
+  <!-- styles for footer -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; margin-top: 30px; width: 100%;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- JavaScript File Link -->
+  <script src="script.js" defer></script>
+</head>
+
+
+<body>
+
+  <div class="root">
+    <!-- ========================= Header and Navbar START ========================= -->
+    <header>
+      <!-- Logo -->
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+
+      <div class="nav-background"></div>
+      <nav>
+        <!-- ========== Close nav icon ========== -->
+        <div class="nav-icon-close">
+          <img src="images/icon-close-menu.svg" alt="navbar close icon">
+        </div>
+
+        <div class="menu-items">
+          <ul>
+            <li class="dropdown-list"><a href="#">Features <img class="arrow" src="images/icon-arrow-down.svg" alt=""></a>
+              <ul class="dropdown">
+                <li><a href="#"><img src="images/icon-todo.svg" alt="todo list">Todo Lists</a></li>
+                <li><a href="#"><img src="images/icon-calendar.svg" alt="claendar">Calendars</a></li>
+                <li><a href="#"><img src="images/icon-reminders.svg" alt="reminder">Reminders</a></li>
+                <li><a href="#"><img src="images/icon-planning.svg" alt="planning">Plannings</a></li>
+              </ul>
+            </li>
+  
+            <li class="dropdown-list">
+              <a href="#">Company
+                <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow icon">
+              </a>
+              <ul class="dropdown">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+  
+        <!-- ========== Login and register Buttons ========== -->
+        <div class="account-buttons">
+          <div><a href="">Login</a></div>
+          <div class="register"><a href="#">Register</a></div>
+        </div>
+      </nav>
+  
+      <div class="nav-icon">
+        <img src="images/icon-menu.svg" alt="navbar open icon">
+      </div>
+    </header> <!-- ========================= Header and Navbar END ========================= -->
+
+    <main>
+    <!-- ========================= Hero Section START ========================= -->
+      <section class="hero">
+        <!-- Content for HERO Section -->
+        <div class="hero-content">
+          <div class="hero-text-content">
+            <div class="text-heading">
+              <h1>Make</h1>
+              <h2>remote work</h2>
+            </div>
+
+            <p> 
+              Get your team in sync, no matter your location.
+              Streamline processes, create team rituals, and
+              watch productivity soar.
+            </p>
+
+            <a href="#" class="learn-more-btn">
+              Learn More
+            </a>
+          </div>
+
+          <!-- Parteners images -->
+          <div class="hero-partners-img">
+            <img src="images/client-databiz.svg" alt="databiz">
+            <img src="images/client-audiophile.svg" alt="audiophile">
+            <img src="images/client-meet.svg" alt="meet">
+            <img src="images/client-maker.svg" alt="maker">
+          </div>
+        </div>
+
+        <!-- Hero Image for DESKTOP -->
+        <div class="hero-image">
+          <div class="large-devices-img">
+            <img src="images/image-hero-desktop.png" alt="hero image desktop">
+          </div>
+
+        <!-- Hero Image for MOBILE -->
+          <div class="small-devices-img">
+            <img src="images/image-hero-mobile.png" alt="hero image mobile">
+          </div>
+        </div>
+      </section> <!-- ========================= Hero Section END ========================= -->
+    </main>
+
+  </div>
+  
+  <!-- ========== Pre-made Footer by Frontend Mentor ========== -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/iSugam" target="_blank">Sugam Sahu</a>.
+  </div>
+</body>
+</html>
