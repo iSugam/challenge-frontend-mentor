@@ -24,7 +24,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution Repo here](https://github.com/iSugam/challenge-frontend-mentor)
-- Live Site URL: [Add live site URL here](https://isugam.github.io/challenge-frontend-mentor/)
+- Live Site URL: [Live site URL here](https://isugam.github.io/challenge-frontend-mentor/)
 
 ## My process
 
