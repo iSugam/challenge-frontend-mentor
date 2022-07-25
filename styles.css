@@ -278,6 +278,10 @@ header .account-buttons .register {
     flex-direction: column;
 }
 
+.hero .hero-content .text-heading {
+    margin-bottom: -30px;
+}
+
 .hero .hero-content .text-heading h1,
 .hero .hero-content .text-heading h2 {
     font-weight: 700;
@@ -300,6 +304,7 @@ header .account-buttons .register {
     border-radius: 10px;
     width: max-content;
     padding: 1rem 1.5rem;
+    margin-top: -30px;
 }
 .hero .hero-content .learn-more-btn:hover {
     color: #000;
